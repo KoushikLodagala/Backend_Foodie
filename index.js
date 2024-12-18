@@ -9,7 +9,7 @@ const cors = require('cors')
 const path = require('path')
 
 const app = express()
-const port = 4200
+const port = process.env.port || 4200
 
 dotEnv.config()
 app.use(cors())
@@ -33,6 +33,6 @@ app.listen(port, ()=>{
 })
 
 
-app.use('/home',(req,res)=>{
-    res.send("<h1> welcome to TOMATO")
+app.use('/',(req,res)=>{
+    res.send("<h1> welcome to FOODIE TOMATO")
 })
