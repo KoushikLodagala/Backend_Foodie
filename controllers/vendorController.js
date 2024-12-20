@@ -45,7 +45,7 @@ const vendorLogin = async (req,res)=>{
 
             const token = jwt.sign({vendorId: vendor._id}, secretKey, {expiresIn: "1h"})
 
-                const vendorId = vendor._id
+                const vendorId = vendor._id;
 
         res.status(200).json({success:"Login Successfull" , token, vendorId})
         console.log(`You have logged with the ${email} and the token is ${token}`)
