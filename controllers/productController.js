@@ -24,7 +24,7 @@ const addProduct = async(req,res)=>{
 
 
         const firmId =  req.params.firmId
-        const firm = await Firm.findById(firmId._id)
+        const firm = await Firm.findById(firmId)
 
         if(!firm){
             return res.status(404).json({error:"No Firm Found"})
