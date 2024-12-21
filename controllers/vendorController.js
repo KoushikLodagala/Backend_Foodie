@@ -79,7 +79,7 @@ const getVendorById = async (req,res)=>{
         res.status(200).json({vendorId, vendorFirmId})
         console.log( vendorFirmId)
      } catch (error) {
-        console.error(error)
+        console.log(error)
         res.status(500).json({error: "Internal server error"})
      }
 }
