@@ -31,7 +31,13 @@ const addProduct = async(req,res)=>{
         }
 
         const product = new Product({
-            productName, price, category, bestseller, description, image, firm: firmId._id
+            productName,
+            price,
+            category, 
+            bestseller,
+            description, 
+            image,
+            firm: firm._id
         })
 
         const savedProduct = await product.save()
